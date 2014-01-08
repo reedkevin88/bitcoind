@@ -1,7 +1,7 @@
 module Bitcoind
   class Client
-    def initialize(user, pass)
-      @endpoint = "http://#{user}:#{pass}@localhost:8332"
+    def initialize(host, user, pass)
+      @endpoint = "http://#{user}:#{pass}@#{host}:8332"
     end
 
     def balance
